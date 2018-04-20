@@ -115,3 +115,7 @@ REST API for search by Similarity using Go
    }
 }
 ```
+
+## Docker Hub image
+
+https://hub.docker.com/r/samuellobato/similarity/
