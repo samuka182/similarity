@@ -1,6 +1,12 @@
 # Similarity
 REST API for search by Similarity using Go
 
+## Endpoint example
+
+```
+POST http://localhost:8080/similarity
+```
+
 ## Request Payload example
 ```json
 {
