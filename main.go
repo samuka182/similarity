@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	similarity "similarity/search"
 	"sort"
 
 	"github.com/gorilla/mux"
+	similarity "github.com/samuka182/similarity/search"
 )
 
 var level = map[string]float64{
