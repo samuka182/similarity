@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"sort"
 
 	"github.com/gorilla/mux"
@@ -47,13 +48,16 @@ type ResultsPayload struct {
 
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
-
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 	router.
 		Methods("POST").
 		Path("/similarity").
 		HandlerFunc(post)
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
 
 func post(w http.ResponseWriter, r *http.Request) {
