@@ -1,6 +1,7 @@
 FROM golang:alpine
 
 ENV APP_ENV ${APP_ENV}
+ENV PORT 8888
  
 ADD . /go/src/similarity
 
